@@ -1,21 +1,18 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+    <div className="min-h-screen grid grid-rows-[auto_1fr_auto] items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] text-white">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start max-w-screen-xl mx-auto">
+        {/* Name Heading */}
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 bg-clip-text text-transparent animate-gradient">
+          Sheikh Yahya Khan
+        </h1>
+
+        {/* Instructions Box */}
+        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)] bg-white/5 p-4 rounded-xl border border-white/10 shadow-md backdrop-blur-sm w-full max-w-md">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
+            <code className="bg-white/10 px-1 py-0.5 rounded text-pink-400 font-mono">
               app/page.tsx
             </code>
             .
@@ -25,77 +22,62 @@ export default function Home() {
           </li>
         </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        {/* Link to Hero Section */}
+        <div className="flex gap-4 items-center flex-col sm:flex-row mt-8">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="rounded-full border border-transparent transition-colors flex items-center justify-center bg-gradient-to-r from-pink-600 via-red-500 to-yellow-400 text-white font-semibold text-sm sm:text-base h-10 sm:h-12 px-6 shadow-md hover:scale-105 hover:shadow-xl"
+            href="#hero"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            Go to Hero Section
           </a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+
+      {/* Hero Section - this will be scrolled into view when the link is clicked */}
+      <section id="hero" className="relative w-full min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] overflow-hidden px-6 sm:px-10">
+        {/* Glow & Blur Background Effects */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-pink-500 opacity-20 rounded-full blur-[120px]" />
+          <div className="absolute bottom-[-20%] right-[-10%] w-[300px] h-[300px] bg-yellow-400 opacity-20 rounded-full blur-[100px]" />
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 text-center max-w-3xl mx-auto">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 bg-clip-text text-transparent animate-fade-in drop-shadow-xl">
+            Welcome to Sheikh Yahya Khan’s World
+          </h1>
+
+          <p className="mt-6 text-lg sm:text-xl lg:text-2xl text-white/80 font-light tracking-wide leading-relaxed">
+            Building modern full-stack experiences that hit hard, look clean, and perform like rockets. Let's craft something unforgettable.
+          </p>
+
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="#"
+              className="px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 via-red-500 to-yellow-400 text-white font-bold shadow-lg hover:scale-105 transition-all"
+            >
+              🚀 Start a Project
+            </a>
+            <a
+              href="#"
+              className="px-6 py-3 rounded-xl border border-white/20 text-white hover:bg-white/10 transition-all"
+            >
+              🧠 See My Work
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center text-sm text-white/80">
+        <a className="hover:text-pink-400 transition" href="#">
+          📘 About Me
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+        <a className="hover:text-yellow-400 transition" href="#">
+          💼 Projects
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+        <a className="hover:text-cyan-400 transition" href="#">
+          🌐 Connect
         </a>
       </footer>
     </div>
