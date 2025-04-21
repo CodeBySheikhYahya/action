@@ -44,7 +44,7 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-3xl mx-auto">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 bg-clip-text text-transparent animate-fade-in drop-shadow-xl">
-            Welcome to Sheikh Yahya Khan’s World
+            Welcome to Sheikh Yahya Khans World
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl lg:text-2xl text-white/80 font-light tracking-wide leading-relaxed">
